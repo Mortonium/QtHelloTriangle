@@ -23,6 +23,12 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuMaze">
+    <property name="title">
+     <string>Maze</string>
+    </property>
+   </widget>
+   <addaction name="menuMaze"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
