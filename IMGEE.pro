@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    MazeWindow.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    MazeWindow.h
 
 FORMS    += mainwindow.ui
