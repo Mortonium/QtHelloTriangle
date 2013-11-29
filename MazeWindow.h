@@ -8,6 +8,7 @@
 #include <QOpenGLFunctions>
 #include <QOpenGLPaintDevice>
 #include <QOpenGLShaderProgram>
+#include <QScreen>
 
 class MazeWindow : public QWindow, protected QOpenGLFunctions
 {
@@ -16,9 +17,16 @@ class MazeWindow : public QWindow, protected QOpenGLFunctions
 private:
     bool m_update_pending;
     bool m_animating;
+    
+    GLuint m_posAttr;
+    GLuint m_colAttr;
+    GLuint m_matrixUniform;
 
     QOpenGLContext *m_context;
     QOpenGLPaintDevice *m_device;
+    QOpenGLShaderProgram *m_program;
+    
+    int m_frame;
 
 protected:
     bool event(QEvent *event);
@@ -38,7 +46,6 @@ public:
     void setAnimating(bool animating);
 
     GLuint loadShader(GLenum type, const char *source);
-    QOpenGLShaderProgram *m_program;
 
 public slots:
     void renderLater();
