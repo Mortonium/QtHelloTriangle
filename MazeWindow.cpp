@@ -138,9 +138,9 @@ void MazeWindow::initialize()
     m_program->addShaderFromSourceCode(QOpenGLShader::Vertex, vertexShaderSource);
     m_program->addShaderFromSourceCode(QOpenGLShader::Fragment, fragmentShaderSource);
     m_program->link();
-    //m_posAttr = m_program->attributeLocation("posAttr");
-    //m_colAttr = m_program->attributeLocation("colAttr");
-    //m_matrixUniform = m_program->uniformLocation("matrix");
+    m_posAttr = m_program->attributeLocation("posAttr");
+    m_colAttr = m_program->attributeLocation("colAttr");
+    m_matrixUniform = m_program->uniformLocation("matrix");
 }
 
 void MazeWindow::render()
@@ -150,7 +150,7 @@ void MazeWindow::render()
     glClear(GL_COLOR_BUFFER_BIT);
 
     m_program->bind();
-    /*
+    
     QMatrix4x4 matrix;
     matrix.perspective(60, 4.0/3.0, 0.1, 100.0);
     matrix.translate(0, 0, -2);
@@ -180,7 +180,7 @@ void MazeWindow::render()
 
     glDisableVertexAttribArray(1);
     glDisableVertexAttribArray(0);
-    */
+    
     m_program->release();
 
     //++m_frame;
