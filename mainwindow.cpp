@@ -16,7 +16,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QWidget *container = QWidget::createWindowContainer(mazeWindow);
     container->setMinimumSize(100, 100);
-    container->setMaximumSize(200, 200);
     container->setFocusPolicy(Qt::TabFocus);
 
     setCentralWidget(container);
