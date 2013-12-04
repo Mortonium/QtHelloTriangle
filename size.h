@@ -4,16 +4,16 @@
 class Size {
 
 private:
-    int itsX;
-    int itsY;
-    int itsZ;
+	int itsX;
+	int itsY;
+	int itsZ;
 
 public:
-    Size(int x, int y, int z);
+	Size(int x, int y, int z);
 
-    int getX();
-    int getY();
-    int getZ();
+	int getX();
+	int getY();
+	int getZ();
 
 };
 
