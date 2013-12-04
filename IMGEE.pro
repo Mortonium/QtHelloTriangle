@@ -14,9 +14,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    MazeWindow.cpp
+    MazeWindow.cpp \
+    maze3d.cpp \
+    size.cpp \
+    position.cpp
 
 HEADERS  += mainwindow.h \
-    MazeWindow.h
+    MazeWindow.h \
+    maze3d.h \
+    size.h \
+    position.h \
+    Direction.h
 
 FORMS    += mainwindow.ui
