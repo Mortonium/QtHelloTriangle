@@ -15,6 +15,13 @@ public:
 	int getY();
 	int getZ();
 
+	Position getAdjacentXNeg();
+	Position getAdjacentXPos();
+	Position getAdjacentYNeg();
+	Position getAdjacentYPos();
+	Position getAdjacentZNeg();
+	Position getAdjacentZPos();
+
 };
 
 #endif // POSITION_H
