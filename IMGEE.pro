@@ -23,6 +23,7 @@ HEADERS  += mainwindow.h \
     MazeWindow.h \
     maze3d.h \
     size.h \
-    position.h
+    position.h \
+    Direction.h
 
 FORMS    += mainwindow.ui
