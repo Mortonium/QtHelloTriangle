@@ -1,6 +1,8 @@
 #ifndef POSITION_H
 #define POSITION_H
 
+#include "Direction.h"
+
 class Position {
 
 private:
@@ -15,6 +17,7 @@ public:
 	int getY();
 	int getZ();
 
+	Position getAdjacent(Direction dir);
 	Position getAdjacentXNeg();
 	Position getAdjacentXPos();
 	Position getAdjacentYNeg();
