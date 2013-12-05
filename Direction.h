@@ -3,13 +3,13 @@
 
 enum Direction {
 
-	None = 0,
-	XNeg = 1,
-	XPos = 2,
-	YNeg = 3,
-	YPos = 4,
-	ZNeg = 5,
-	ZPos = 6
+	NO_DIRECTION = 0,
+	XNEG = 1,
+	XPOS = 2,
+	YNEG = 3,
+	YPOS = 4,
+	ZNEG = 5,
+	ZPOS = 6
 
 };
 
