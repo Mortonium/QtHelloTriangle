@@ -1,7 +1,8 @@
 #include "cellinfo.h"
 
-CellInfo::CellInfo(Position pos, bool filled, bool canTravelXNeg, bool canTravelXPos, bool canTravelYNeg, bool canTravelYPos, bool canTravelZNeg, bool canTravelZPos) {
-	itsPosition = pos;
+CellInfo::CellInfo(Position pos, bool filled, bool canTravelXNeg, bool canTravelXPos,
+	               bool canTravelYNeg, bool canTravelYPos, bool canTravelZNeg, bool canTravelZPos)
+                   : itsPosition(pos) {
 	itsCanTravel[NO_DIRECTION] = filled;
 	itsCanTravel[XNEG] = canTravelXNeg;
 	itsCanTravel[XPOS] = canTravelXPos;

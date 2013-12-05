@@ -4,6 +4,7 @@
 #include <string>
 
 #include "size.h"
+#include "cellinfo.h"
 
 class Maze3D {
 	
@@ -15,12 +16,16 @@ public:
 	
 	Size getSize();
 	
-	static Maze3D generate(std:string script);
-	static Maze3D generateFromFile(std:string file);
+	static Maze3D* generate(std::string script);
+	static Maze3D* generateFromFile(std::string file);
 	virtual bool generateActual(std::string script) = 0;
 	
-	static Maze3D load(std::string file);
+	static Maze3D* load(std::string file);
 	bool save(std::string file);
+	
+	virtual CellInfo getCellAtPosition(Position pos) = 0;
+	virtual CellInfo getStartCell() = 0;
+	virtual CellInfo getEndCell() = 0;
 	
 };
 
