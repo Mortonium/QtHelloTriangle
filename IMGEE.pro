@@ -18,7 +18,8 @@ SOURCES += main.cpp\
     maze3d.cpp \
     size.cpp \
     position.cpp \
-    cellinfo.cpp
+    cellinfo.cpp \
+    maze3dbooleanarray.cpp
 
 HEADERS  += mainwindow.h \
     MazeWindow.h \
@@ -26,6 +27,7 @@ HEADERS  += mainwindow.h \
     size.h \
     position.h \
     Direction.h \
-    cellinfo.h
+    cellinfo.h \
+    maze3dbooleanarray.h
 
 FORMS    += mainwindow.ui
