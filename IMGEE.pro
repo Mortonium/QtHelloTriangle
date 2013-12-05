@@ -17,13 +17,15 @@ SOURCES += main.cpp\
     MazeWindow.cpp \
     maze3d.cpp \
     size.cpp \
-    position.cpp
+    position.cpp \
+    cellinfo.cpp
 
 HEADERS  += mainwindow.h \
     MazeWindow.h \
     maze3d.h \
     size.h \
     position.h \
-    Direction.h
+    Direction.h \
+    cellinfo.h
 
 FORMS    += mainwindow.ui

@@ -18,17 +18,17 @@ int Position::getZ() {
 
 Position Position::getAdjacent(Direction dir) {
 	switch (dir) {
-		case XNeg:
+		case XNEG:
 			return this->getAdjacentXNeg();
-		case XPos:
+		case XPOS:
 			return this->getAdjacentXPos();
-		case YNeg:
+		case YNEG:
 			return this->getAdjacentYNeg();
-		case YPos:
+		case YPOS:
 			return this->getAdjacentYPos();
-		case ZNeg:
+		case ZNEG:
 			return this->getAdjacentZNeg();
-		case ZPos:
+		case ZPOS:
 			return this->getAdjacentZPos();
 		default:
 			break;
