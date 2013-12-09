@@ -2,6 +2,7 @@
 #define POSITION_H
 
 #include "Direction.h"
+#include "size.h"
 
 class Position {
 

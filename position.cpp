@@ -16,7 +16,7 @@ int Position::getZ() {
 	return itsZ;
 }
 
-bool hasValidAdjacent(Direction dir, Size size) {
+bool Position::hasValidAdjacent(Direction dir, Size size) {
 	switch (dir) {
 		case XNEG:
 			return this->hasValidAdjacentXNeg(size);
@@ -34,22 +34,22 @@ bool hasValidAdjacent(Direction dir, Size size) {
 			break;
 	}
 }
-bool hasValidAdjacentXNeg(Size size) {
+bool Position::hasValidAdjacentXNeg(Size size) {
 	return itsX > 0;
 }
-bool hasValidAdjacentXPos(Size size) {
+bool Position::hasValidAdjacentXPos(Size size) {
 	return itsX < (size.getX() - 1);
 }
-bool hasValidAdjacentYNeg(Size size) {
+bool Position::hasValidAdjacentYNeg(Size size) {
 	return itsY > 0;
 }
-bool hasValidAdjacentYPos(Size size) {
+bool Position::hasValidAdjacentYPos(Size size) {
 	return itsY < (size.getY() - 1);
 }
-bool hasValidAdjacentZNeg(Size size) {
+bool Position::hasValidAdjacentZNeg(Size size) {
 	return itsZ > 0;
 }
-bool hasValidAdjacentZPos(Size size) {
+bool Position::hasValidAdjacentZPos(Size size) {
 	return itsZ < (size.getZ() - 1);
 }
 
