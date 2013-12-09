@@ -16,6 +16,43 @@ int Position::getZ() {
 	return itsZ;
 }
 
+bool hasValidAdjacent(Direction dir, Size size) {
+	switch (dir) {
+		case XNEG:
+			return this->hasValidAdjacentXNeg(size);
+		case XPOS:
+			return this->hasValidAdjacentXPos(size);
+		case YNEG:
+			return this->hasValidAdjacentYNeg(size);
+		case YPOS:
+			return this->hasValidAdjacentYPos(size);
+		case ZNEG:
+			return this->hasValidAdjacentZNeg(size);
+		case ZPOS:
+			return this->hasValidAdjacentZPos(size);
+		default:
+			break;
+	}
+}
+bool hasValidAdjacentXNeg(Size size) {
+	return itsX > 0;
+}
+bool hasValidAdjacentXPos(Size size) {
+	return itsX < (size.getX() - 1);
+}
+bool hasValidAdjacentYNeg(Size size) {
+	return itsY > 0;
+}
+bool hasValidAdjacentYPos(Size size) {
+	return itsY < (size.getY() - 1);
+}
+bool hasValidAdjacentZNeg(Size size) {
+	return itsZ > 0;
+}
+bool hasValidAdjacentZPos(Size size) {
+	return itsZ < (size.getZ() - 1);
+}
+
 Position Position::getAdjacent(Direction dir) {
 	switch (dir) {
 		case XNEG:

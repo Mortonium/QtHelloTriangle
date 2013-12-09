@@ -17,6 +17,14 @@ public:
 	int getY();
 	int getZ();
 
+	bool hasValidAdjacent(Direction dir, Size size);
+	bool hasValidAdjacentXNeg(Size size);
+	bool hasValidAdjacentXPos(Size size);
+	bool hasValidAdjacentYNeg(Size size);
+	bool hasValidAdjacentYPos(Size size);
+	bool hasValidAdjacentZNeg(Size size);
+	bool hasValidAdjacentZPos(Size size);
+	
 	Position getAdjacent(Direction dir);
 	Position getAdjacentXNeg();
 	Position getAdjacentXPos();
