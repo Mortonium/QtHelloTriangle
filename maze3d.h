@@ -5,6 +5,7 @@
 
 #include "size.h"
 #include "cellinfo.h"
+class Maze3DBooleanArray;
 
 class Maze3D {
 	
@@ -19,6 +20,7 @@ public:
 	static Maze3D* generate(std::string script);
 	static Maze3D* generateFromFile(std::string file);
 	virtual bool generateActual(std::string script) = 0;
+	static Maze3D* generateTestMaze();
 	
 	static Maze3D* load(std::string file);
 	bool save(std::string file);
@@ -28,5 +30,6 @@ public:
 	virtual CellInfo getEndCell() = 0;
 	
 };
+//#include "maze3dbooleanarray.h"
 
 #endif // MAZE3D_H

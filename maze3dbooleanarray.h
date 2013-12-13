@@ -8,6 +8,7 @@
 #include "maze3d.h"
 #include "cellinfo.h"
 
+
 class Maze3DBooleanArray : Maze3D {
 	
 private:
@@ -19,6 +20,7 @@ public:
 	Maze3DBooleanArray(Size size);
 	
 	bool generateActual(std::string script);
+	void generateTestMaze();
 	
 	CellInfo getCellAtPosition(Position pos);
 	CellInfo getStartCell();

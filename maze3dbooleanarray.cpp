@@ -6,12 +6,29 @@ Maze3DBooleanArray::Maze3DBooleanArray(Size size) : Maze3D(size), itsStartPositi
 		itsMazeArray[i] = new bool*[size.getY()];
 		for (int j = 0; j < size.getY(); j++) {
 			itsMazeArray[i][j] = new bool[size.getZ()];
+			for (int k = 0; k < size.getZ(); k++) {
+				itsMazeArray[i][j][k] = false;
+			}
 		}
 	}
 }
 
 bool Maze3DBooleanArray::generateActual(std::string script) {
 	
+}
+void Maze3DBooleanArray::generateTestMaze() {
+	if ((getSize().getX() == 5) && (getSize().getY() == 5) && (getSize().getZ() == 5)) {
+		itsMazeArray[1][1][1] = true;
+		itsMazeArray[2][1][1] = true;
+		itsMazeArray[3][1][1] = true;
+		
+		itsMazeArray[1][2][1] = true;
+		itsMazeArray[3][2][1] = true;
+		
+		itsMazeArray[1][3][1] = true;
+		itsMazeArray[2][3][1] = true;
+		itsMazeArray[3][3][1] = true;
+	}
 }
 
 CellInfo Maze3DBooleanArray::getCellAtPosition(Position pos) {
