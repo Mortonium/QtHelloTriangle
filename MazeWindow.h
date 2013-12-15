@@ -1,6 +1,10 @@
 #ifndef MAZEWINDOW_H
 #define MAZEWINDOW_H
 
+#include <iostream>
+#include <fstream>
+#include <string>
+
 #include <QWindow>
 //#include <QtCore>
 #include <QExposeEvent>
@@ -9,6 +13,12 @@
 #include <QOpenGLPaintDevice>
 #include <QOpenGLShaderProgram>
 #include <QScreen>
+#include <QString>
+#include <QStringList>
+#include <QTextStream>
+#include <QFile>
+#include <QMessageBox>
+#include <QDir>
 
 #include "maze3d.h"
 
@@ -49,8 +59,6 @@ public:
 	virtual void initialize();
 
 	void setAnimating(bool animating);
-
-	GLuint loadShader(GLenum type, const char *source);
 
 	public slots:
 	void renderLater();

@@ -31,3 +31,10 @@ HEADERS  += mainwindow.h \
     maze3dbooleanarray.h
 
 FORMS    += mainwindow.ui
+
+OTHER_FILES += \
+    MainShader.frag \
+    MainShader.vert
+
+RESOURCES += \
+    Shaders.qrc

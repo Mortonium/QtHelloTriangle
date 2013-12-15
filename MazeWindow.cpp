@@ -118,21 +118,17 @@ void MazeWindow::setAnimating(bool animating) {
 		renderLater();
 }
 
-GLuint MazeWindow::loadShader(GLenum type, const char *source) {
-	GLuint shader = glCreateShader(type);
-	glShaderSource(shader, 1, &source, 0);
-	glCompileShader(shader);
-	return shader;
-}
-
 void MazeWindow::initialize() {
+
 	m_program = new QOpenGLShaderProgram(this);
-	m_program->addShaderFromSourceCode(QOpenGLShader::Vertex, vertexShaderSource);
-	m_program->addShaderFromSourceCode(QOpenGLShader::Fragment, fragmentShaderSource);
+	m_program->addShaderFromSourceFile(QOpenGLShader::Vertex,   ":MainShader.vert");
+	m_program->addShaderFromSourceFile(QOpenGLShader::Fragment, ":MainShader.frag");
 	m_program->link();
+
 	m_posAttr = m_program->attributeLocation("posAttr");
 	m_colAttr = m_program->attributeLocation("colAttr");
 	m_matrixUniform = m_program->uniformLocation("matrix");
+
 }
 
 void MazeWindow::render() {
