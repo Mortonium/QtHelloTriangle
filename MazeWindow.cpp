@@ -9,6 +9,7 @@ MazeWindow::MazeWindow(QWindow *parent)
 	, itsMaze(0)
 {
 	setSurfaceType(QWindow::OpenGLSurface);
+	itsMaze = Maze3D::generateTestMaze();
 }
 MazeWindow::~MazeWindow() {
 
