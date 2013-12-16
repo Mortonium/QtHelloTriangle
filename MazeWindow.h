@@ -40,6 +40,10 @@ private:
 	QOpenGLPaintDevice *m_device;
 	QOpenGLShaderProgram *m_program;
 
+	GLuint itsPositionBufferNode;
+	
+	GLuint itsPositionBufferEdge;
+
 	int m_frame;
 
 protected:
