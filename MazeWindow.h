@@ -20,6 +20,7 @@
 #include <QMessageBox>
 #include <QDir>
 
+#include "glm/glm.hpp"
 #include "maze3d.h"
 
 class MazeWindow : public QWindow, protected QOpenGLFunctions {
