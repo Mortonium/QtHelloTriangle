@@ -13,8 +13,28 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    MazeWindow.cpp \
+    maze3d.cpp \
+    size.cpp \
+    position.cpp \
+    cellinfo.cpp \
+    maze3dbooleanarray.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    MazeWindow.h \
+    maze3d.h \
+    size.h \
+    position.h \
+    Direction.h \
+    cellinfo.h \
+    maze3dbooleanarray.h
 
 FORMS    += mainwindow.ui
+
+OTHER_FILES += \
+    MainShader.frag \
+    MainShader.vert
+
+RESOURCES += \
+    Shaders.qrc
